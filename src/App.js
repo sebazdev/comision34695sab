@@ -1,14 +1,19 @@
 import './App.css';
+import Navbar from './components/Navbar/Navbar';
 
 function App() {
+  // const imagen = <img src="url" alt="imagen" />
+
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <header id="header" className="App-header OtraClase">
         <p>
           Bienvenidos
         </p>
-        <button>Boton</button>
-      </header>
+        <button style={{ color: 'red', backgroundColor: 'green', fontSize: '30px'}}>Boton</button>
+        {imagen}
+      </header> */}
+      <Navbar />
     </div>
   );
 }
