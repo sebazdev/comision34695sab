@@ -1,19 +1,16 @@
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
+// import Counter from './Counter/Counter';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
 function App() {
   // const imagen = <img src="url" alt="imagen" />
 
   return (
     <div className="App">
-      {/* <header id="header" className="App-header OtraClase">
-        <p>
-          Bienvenidos
-        </p>
-        <button style={{ color: 'red', backgroundColor: 'green', fontSize: '30px'}}>Boton</button>
-        {imagen}
-      </header> */}
       <Navbar />
+      {/* <Counter /> */}
+      <ItemListContainer greeting='Hola comision 34695'/>
     </div>
   );
 }
