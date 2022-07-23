@@ -1,9 +1,20 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const Counter = () => {
     const [count, setCount] = useState(10)
-    const [text, setText] = useState('Text')
-    // let count = 10
+    const [title, setTitle] = useState('Hola')
+
+    // useEffect(() => {
+    //     console.log('el componente se monto')
+
+    //     return () => console.log('se va a desmontar el componente')
+    // }, [])
+
+    useEffect(() => {
+        console.log('cambio el title')
+
+        return () => console.log('antes de cambiar title')
+    }, [title])
 
     const increment = () => {
         // count++
@@ -13,10 +24,11 @@ const Counter = () => {
     const decrement = () => {
         setCount(count - 1)
     }
-
+    // console.log('render')
     return (
         <div>
-            <h1>{text}</h1>
+            <h1>{title}</h1>
+            <button onClick={() => setTitle(title === 'Hola' ? 'Chau' : 'Hola')}>Saludar</button>
             <h1>{count}</h1>
             <button onClick={decrement}>Decrementar</button>
             <button onClick={increment}>Incrementar</button>

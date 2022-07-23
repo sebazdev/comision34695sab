@@ -1,17 +1,24 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
-const Button = ({ handleClick, color, children }) => {
-    
-    // const { handleClick, color, children } = props
+const Button = () => {
+
+    const handleClick = () => {
+        console.log('hola')
+    }
+
+    useEffect(() => {
+        const button = document.getElementById('button')
+        button.addEventListener('click', handleClick)
+
+        return () => {
+            button.removeEventListener('click', handleClick)
+        }
+    }, [])
+
+ 
 
     return (
-        // React.createElement('button', { 
-        //     onClick: props.handleClick, 
-        //     style: { color: props.color}
-        // }, props.label)
-        <button onClick={handleClick} style={{ color: color}}>
-            {children}
-        </button>
+        <button id='button'>Button</button>
     )
 }
 
