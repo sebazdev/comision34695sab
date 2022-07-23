@@ -1,20 +1,20 @@
-import { useState } from 'react'
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
-import Counter from './components/Counter/Counter';
+
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import Button from './components/Button/Button';
+import Counter from './components/Counter/Counter';
 
 function App() {
-  const [show, setShow] = useState(true)
+
+  const handleOnAdd = (quantity) => {
+    console.log(`la cantidad agregada es: ${quantity}`)
+  }
 
   return (
     <div className="App"> 
-      {/* <Navbar /> */}
-      <button style={{ color: show ? 'red' : 'green'}} onClick={() => setShow(!show)}>{show ? 'Ocultar' : 'Mostrar'}</button>
-      {/* {show ? <Counter /> : null}  */}
-      {/* <ItemListContainer greeting='Hola comision 34695'/> */}
-      { show ? <Button /> : null }
+      <Navbar />
+      <ItemListContainer greeting='Hola comision 34695'/>
+      <Counter stock={10} onAdd={handleOnAdd}/>
     </div>
   );
 }

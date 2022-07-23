@@ -8,6 +8,7 @@ const Button = () => {
 
     useEffect(() => {
         const button = document.getElementById('button')
+        
         button.addEventListener('click', handleClick)
 
         return () => {
