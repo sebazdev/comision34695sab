@@ -1,29 +1,21 @@
+
 import './Navbar.css'
-// import React from 'react'
-import Button from '../Button/Button'
 import CartWidget from '../CartWidget/CartWidget'
 
 const Navbar = () => {
-
-    const text = 'hice click'
-
-    const handleClick = () => {
-        console.log(text)
-    }
-
     return (
-        <nav className="Navbar">
-            <div>
-                <h1>Ecommerce</h1>
-            </div>
-            <div>
-                {/* {React.createElement(Button, { label: 'Prueba', color: 'orange'})} */}
-                <Button handleClick={handleClick} color='red'>celulares</Button>
-                <Button color='blue'>tablets</Button>
-                <Button color='green'>notebooks</Button>
+        <nav className='Navbar'>
+            <button to='/'>
+                ECOMMERCE
+            </button>
+            <div className="Categories">
+                <button className="Option">Celulares</button>
+                <button className="Option">Tablets</button>
+                <button className="Option">Notebooks</button>
             </div>
             <CartWidget />
         </nav>
+        
     )
 }
 

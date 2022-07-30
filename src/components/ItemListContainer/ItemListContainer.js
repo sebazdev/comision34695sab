@@ -13,17 +13,11 @@ const ItemListContainer = ({ greeting }) => {
         })
     }, [])
 
-    // const productsComp = products.map(prod => <li key={prod.id}>{prod.name}</li>)
     return (
         <>
             <h1>{greeting}</h1>
-            {/* <ul> */}
-                {/* {productsComp} */}
-                {/* {products.map(prod => <li key={prod.id}>{prod.name}</li>)}
-            </ul>         */}
             <ItemList products={products}/>
         </>
-
     )
 }
 
