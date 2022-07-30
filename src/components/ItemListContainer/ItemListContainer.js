@@ -4,7 +4,7 @@ import { getProductsDeAlfredo } from '../../asyncMock'
 
 import ItemList from '../ItemList/ItemList'
 
-const ItemListContainer = ({ greeting }) => {
+const ItemListContainer = ({ greeting, setPage }) => {
     const [products, setProducts] = useState([])
 
     useEffect(() => {
@@ -16,7 +16,7 @@ const ItemListContainer = ({ greeting }) => {
     return (
         <>
             <h1>{greeting}</h1>
-            <ItemList products={products}/>
+            <ItemList products={products} setPage={setPage}/>
         </>
     )
 }
